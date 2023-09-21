@@ -2,7 +2,7 @@ let Titulo = document.title;
 
 window.addEventListener('blur', () => {
     Titulo = document.title;
-    document.title = "No te vallas, regresa :(";
+    document.title = "Te extraño :(";
 })
 
 window.addEventListener('focus', () => {
@@ -98,7 +98,7 @@ function DibujarFlor(x, y, NumeroPetalos, RadioXPetalo, RadioYPetalo, AltoTrazo)
     let contadorPetalos = 0;
     function dibujarSiguientePetalo() {
         if (contadorPetalos <= NumeroPetalos) {
-          const Angulo = contadorPetalos * AnguloIncrement;
+          const Angulo = contadorPetalos * AnguloIncrement; 
           DibujarPetalo(x, y, RadioXPetalo, 2, Angulo, 'yellow', 100);
           contadorPetalos++;
           setTimeout(dibujarSiguientePetalo, 1000); 
@@ -170,3 +170,6 @@ function CrearVarias() {
     }
 }
 
+window.addEventListener("load", function (event) {    console.log("'Todos los recursos terminaron de cargar!");  });
+const audio = new Audio('Audio/FloresAmarillas.mp3');
+audio.autoplay = true;
