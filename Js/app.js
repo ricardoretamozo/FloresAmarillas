@@ -172,4 +172,8 @@ function CrearVarias() {
 
 window.addEventListener("load", function (event) {    console.log("'Todos los recursos terminaron de cargar!");  });
 const audio = new Audio('Audio/FloresAmarillas.mp3');
-audio.autoplay = true;
+//audio.autoplay = true;
+audio.oncanplay = () => {
+  console.log('oncanplay')
+  audio.play()
+}
