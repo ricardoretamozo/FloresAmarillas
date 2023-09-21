@@ -47,22 +47,23 @@
 
     <script src="Js/app.js"></script>
     <script src="Js/Dis.js"></script>
-</body>
-<script>
-    const audioElement = document.querySelector("audio");
-
-    // Función para reproducir o pausar el sonido
-    function toggleAudio() {
-        if (audioElement.paused) {
-            audioElement.play();
-        } else {
-            audioElement.pause();
+    <script>
+        const audioElement = document.querySelector("audio");
+    
+        // Función para reproducir o pausar el sonido
+        function toggleAudio() {
+            if (audioElement.paused) {
+                audioElement.play();
+            } else {
+                audioElement.pause();
+            }
         }
-    }
-
-    // Función para ajustar el volumen del sonido
-    function setVolume(volume) {
-        audioElement.volume = volume;
-    }
-</script>
+    
+        // Función para ajustar el volumen del sonido
+        function setVolume(volume) {
+            audioElement.volume = volume;
+        }
+    </script>
+    
+</body>
 </html>
