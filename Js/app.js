@@ -170,6 +170,21 @@ function CrearVarias() {
     }
 }
 
+// Solicitar permisos de reproducción automática
+async function requestAutoplayPermission() {
+  try {
+      await document.querySelector("audio").play();
+  } catch (error) {
+      // El navegador bloqueó la reproducción automática
+      console.error("Reproducción automática bloqueada por el navegador.");
+  }
+}
+
+// Llamar a la función cuando el usuario interactúe con la página
+document.addEventListener("click", () => {
+  requestAutoplayPermission();
+});
+
 window.addEventListener("load", function (event) {    console.log("'Todos los recursos terminaron de cargar!");  });
 const audio = new Audio('Audio/FloresAmarillas.mp3');
 //audio.autoplay = true;
