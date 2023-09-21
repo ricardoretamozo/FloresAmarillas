@@ -169,3 +169,4 @@ function CrearVarias() {
         DibujarFlorSinTallo(x, y, 8, 30, 80, TamañoFlor);
     }
 }
+
